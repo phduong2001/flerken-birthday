@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5rem;
+    background: #CCCCCC;
+}
+
+.main-header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.main-header h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.main-header h1 span {
+    color: #AC3498;
+}
+
+.main-header p {
+    font-size: 2rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 2rem;
+}
+
+.container .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.container .card:nth-child(even) img {
+    order: 2;
+}
+
+.container .card img {
+    width: 100%;
+}
+
+.container .card h3 {
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width:600px) {
+    .container .card {
+        display: block;
+    }
+}
