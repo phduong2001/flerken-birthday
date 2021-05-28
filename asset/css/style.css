@@ -9,18 +9,33 @@
 }
 
 @font-face {
-    font-family: 'Charmonman';
-    src: url(../font/Charmonman-Regular.ttf);
-}
-
-@font-face {
     font-family: 'Patrick Hand SC';
     src: url(../font/PatrickHandSC-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: Roboto;
     src: url(../font/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: Ciaobella;
+    src: url(../font/Ciaobella.otf);
+}
+
+@font-face {
+    font-family: Kermel;
+    src: url(../font/Kermel.otf);
+}
+
+@font-face {
+    font-family: 'Soup of Justice';
+    src: url(../font/Soup-of-Justice.ttf);
+}
+
+@font-face {
+    font-family: "Smoothy Cursive";
+    src: url(../font/Smoothy-Cursive.ttf);
 }
 
 * {
@@ -46,11 +61,18 @@ body {
     background: #e4e3e3;
 }
 
+.main-header img {
+    left: 0;
+    top: 0;
+    width: 40%;
+    position: absolute;
+}
+
 .main-header h1 {
     margin-bottom: 2rem;
-    font-family: 'Charmonman', cursive;
-    font-size: 5rem;
-    line-height: 1.2;
+    font-family: Kermel, cursive;
+    font-size: 6rem;
+    line-height: 1;
 }
 
 .main-header h1 span {
@@ -58,66 +80,98 @@ body {
 }
 
 .main-header p {
+    font-family: Smoothy Cursive;
     font-size: 2rem;
 }
 
-.container {
+.gallery h1 {
+    margin-bottom: 2rem;
+    color: #444444;
+    font-family: "Ciaobella";
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1;
+    text-align: center;
+}
+
+.gallery .container {
     max-width: 900px;
     margin: auto;
     overflow: auto;
     padding: 0 2rem;
 }
 
-.container .card {
+.gallery .container .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 2rem;
     background: #F0EEF0;
-    font-family: 'Amatic SC';
-    font-size: 2.5rem;
+    font-family: 'Patrick Hand SC';
+    font-size: 2.25rem;
     box-shadow: 5px 5px 10px -4px rgba(0,0,0,0.25);
     -webkit-box-shadow: 5px 5px 10px -4px rgba(0,0,0,0.25);
     -moz-box-shadow: 5px 5px 10px -4px rgba(0,0,0,0.25);
 }
 
-.container .card:nth-child(even) img {
+.gallery .container .card:nth-child(even) img {
     order: 2;
 }
 
-.container .card div {
-    margin: 2rem;
+.gallery .container .card div {
+    margin: 2rem 2rem 0;
 }
 
-.container .card img {
+.gallery .container .card img {
     width: 100%;
 }
 
-.container .card h3 {
-    margin-bottom: 1rem;
+.gallery .container .card h3 {
+    margin-bottom: 0.5rem;
     font-weight: 700;
 }
 
-.container .card p {
+.gallery .container .card p {
     font-weight: 600;
     opacity: 0.65;
 }
 
-@media screen and (max-width:800px) {
-    .container .card {
+@media (max-width:800px) {
+    .gallery .container .card {
         display: block;
+    }
+
+    .gallery .container .card {
+        padding-bottom: 2rem;
     }
 }
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 1rem 0;
     background-color: #2A6E7B;
     color: #fff;
     font-family: Roboto;
+    font-size: 1.2rem;
+    text-align: center;
     box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.3);
+}
+
+#scroll-up {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 99;
+    border-style: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: #fff;
+    background-color: #707070;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+#scroll-up:hover {
+    background-color: #5a5a5a;
 }
