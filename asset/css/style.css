@@ -1,43 +1,3 @@
-@font-face {
-    font-family: 'Amatic SC';
-    src: url(../font/AmaticSC-Regular.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    src: url(../font/EBGaramond-VariableFont_wght.ttf);
-}
-
-@font-face {
-    font-family: 'Patrick Hand SC';
-    src: url(../font/PatrickHandSC-Regular.ttf);
-}
-
-@font-face {
-    font-family: Roboto;
-    src: url(../font/Roboto-Thin.ttf);
-}
-
-@font-face {
-    font-family: Ciaobella;
-    src: url(../font/Ciaobella.otf);
-}
-
-@font-face {
-    font-family: Kermel;
-    src: url(../font/Kermel.otf);
-}
-
-@font-face {
-    font-family: 'Soup of Justice';
-    src: url(../font/Soup-of-Justice.ttf);
-}
-
-@font-face {
-    font-family: "Smoothy Cursive";
-    src: url(../font/Smoothy-Cursive.ttf);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -50,6 +10,8 @@ body {
 }
 
 .main-header {
+    overflow: hidden;
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -57,16 +19,37 @@ body {
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    margin-bottom: 2rem;
-    background: #e4e3e3;
+    background-color: #e4e3e3;
 }
 
-.main-header img {
-    left: 0;
-    top: 0;
-    width: 40%;
+.main-header > img {
     position: absolute;
+    z-index: 0;
+    left: 2rem;
+    bottom: -1rem;
+    width: 15rem;
+    opacity: 0.9;
+    cursor: pointer;
 }
+
+.main-header .swing { 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s; 
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-duration: 2s; 
+    -moz-animation-iteration-count: infinite;
+    transform-origin: bottom center;
+    animation-name: swing; 
+    -webkit-transform-origin: bottom center; 
+    -webkit-animation-name: swing; 
+    -moz-transform-origin: bottom center; 
+    -moz-animation-name: swing; 
+ }
+
+@keyframes swing { 
+    50% { transform: rotate(5deg); } 
+ }
 
 .main-header h1 {
     margin-bottom: 2rem;
@@ -80,8 +63,58 @@ body {
 }
 
 .main-header p {
-    font-family: Smoothy Cursive;
+    font-family: "Smoothy Cursive", cursive;
     font-size: 2rem;
+}
+
+.zoom-animation {
+    -webkit-animation: animate-zoom 1s;
+    animation: animate-zoom 1s
+}
+  
+@keyframes animate-zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.main-header .decoration img {
+    position: absolute;
+    bottom: -0.75rem;
+    width: 5rem;
+}
+
+.main-header .decoration #wildflower1 {
+    right: 0;
+}
+
+.main-header .decoration #wildflower2 {
+    right: 5rem;
+}
+
+.main-header .decoration #wildflower3 {
+    right: 10rem;
+}
+
+.main-header .decoration #wildflower4 {
+    right: 15rem;
+}
+
+.main-header .decoration #wildflower5 {
+    right: 20rem;
+}
+
+.introduction {
+    display: none;
+    background-color: #F7F7F7;
+}
+
+.introduction p {
+    padding: 2rem 20%;
+    text-align: justify;
+}
+
+.gallery {
+    margin: 2rem 0;
 }
 
 .gallery h1 {
@@ -95,7 +128,7 @@ body {
 }
 
 .gallery .container {
-    max-width: 900px;
+    max-width: 800px;
     margin: auto;
     overflow: auto;
     padding: 0 2rem;
@@ -104,7 +137,7 @@ body {
 .gallery .container .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     background: #F0EEF0;
     font-family: 'Patrick Hand SC';
     font-size: 2.25rem;
@@ -118,7 +151,7 @@ body {
 }
 
 .gallery .container .card div {
-    margin: 2rem 2rem 0;
+    margin: 1.5rem 2rem 0;
 }
 
 .gallery .container .card img {
@@ -135,19 +168,24 @@ body {
     opacity: 0.65;
 }
 
-@media (max-width:800px) {
-    .gallery .container .card {
-        display: block;
-    }
+.wish {
+    padding: 3rem 0;
+    background-color: #F7F7F7;
+    text-align: center;
+}
 
-    .gallery .container .card {
-        padding-bottom: 2rem;
-    }
+.wish img {
+    width: 3rem;
+    cursor: pointer;
+}
+
+.wish p {
+    display: none;
 }
 
 .footer {
-    padding: 1rem 0;
-    background-color: #2A6E7B;
+    padding: 0.75rem 0;
+    background-color: #167168;
     color: #fff;
     font-family: Roboto;
     font-size: 1.2rem;
@@ -155,6 +193,11 @@ body {
     box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.3);
+}
+
+.footer .by a {
+    color: #fff;
+    text-decoration: none;
 }
 
 #scroll-up {
@@ -167,11 +210,60 @@ body {
     border-radius: 10px;
     padding: 0.5rem;
     color: #fff;
-    background-color: #707070;
+    background-color: #818181;
     opacity: 0.75;
     cursor: pointer;
 }
 
 #scroll-up:hover {
     background-color: #5a5a5a;
+}
+
+@media (max-width:800px) {
+    .main-header > img {
+        left: 0;
+        bottom: -0.25rem;
+        width: 7rem;
+    }
+
+    .main-header h1 {
+        font-size: 5rem;
+    }
+
+    .main-header p {
+        font-size: 1.5rem;
+    }
+
+    .main-header .decoration img {
+        width: 3rem;
+    }
+    
+    .main-header .decoration #wildflower1 {
+        right: 0;
+    }
+    
+    .main-header .decoration #wildflower2 {
+        right: 3rem;
+    }
+    
+    .main-header .decoration #wildflower3 {
+        right: 6rem;
+    }
+    
+    .main-header .decoration #wildflower4 {
+        right: 9rem;
+    }
+
+    .main-header .decoration #wildflower5 {
+        right: 12rem;
+    }
+
+    .gallery .container .card {
+        display: block;
+        padding-bottom: 2rem;
+    }
+
+    .footer {
+        font-size: 1rem;
+    }
 }

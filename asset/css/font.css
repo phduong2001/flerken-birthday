@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Amatic SC';
+    src: url(../font/AmaticSC-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url(../font/EBGaramond-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Patrick Hand SC';
+    src: url(../font/PatrickHandSC-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../font/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: Ciaobella;
+    src: url(../font/Ciaobella.otf);
+}
+
+@font-face {
+    font-family: Kermel;
+    src: url(../font/Kermel.otf);
+}
+
+@font-face {
+    font-family: 'Soup of Justice';
+    src: url(../font/Soup-of-Justice.ttf);
+}
+
+@font-face {
+    font-family: "Smoothy Cursive";
+    src: url(../font/Smoothy-Cursive.ttf);
+}
