@@ -83,6 +83,11 @@ body {
     width: 5rem;
 }
 
+.main-header .decoration > img {
+    top: 2rem;
+    right: 2rem;
+}
+
 .main-header .decoration #wildflower1 {
     right: 0;
 }
@@ -104,17 +109,35 @@ body {
 }
 
 .introduction {
+    position: relative;
     display: none;
     background-color: #F7F7F7;
 }
 
+.introduction img {
+    position: absolute;
+    width: 1.5rem;
+    top: 1rem;
+    right: 5%;
+}
+
 .introduction p {
+    position: relative;
     padding: 2rem 20%;
     text-align: justify;
 }
 
 .gallery {
-    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.gallery > img {
+    position: absolute;
+    transform: rotate(-25deg);
+    left: -0.7rem;
+    width: 20%;
 }
 
 .gallery h1 {
@@ -122,7 +145,7 @@ body {
     color: #444444;
     font-family: "Ciaobella";
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1;
     text-align: center;
 }
@@ -169,18 +192,60 @@ body {
 }
 
 .wish {
-    padding: 3rem 0;
-    background-color: #F7F7F7;
+    position: relative;
+    padding: 1.25rem 0;
+    background-color: #f8f6f4;
     text-align: center;
+    box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.15);
 }
 
-.wish img {
-    width: 3rem;
+.wish > img {
+    position: absolute;
+    width: 3.5rem;
+    top: -1rem;
+    left: 2.5rem;
+}
+
+.wish h1 {
+    font-family: Ciaobella, cursive;
+    color: #444444;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.wish hr {
+    margin: 0 2rem 1rem;
+}
+
+.wish .get-wish {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wish .get-wish #envelope {
+    width: 5rem;
     cursor: pointer;
 }
 
-.wish p {
+.wish .get-wish .note {
     display: none;
+    position: relative;
+    margin-left: 3rem;
+    background: url("/asset/svg/note.svg");
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    width: 17rem;
+    height: 17rem;
+}
+
+.wish .get-wish .note p {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    left: 2rem;
 }
 
 .footer {
@@ -190,9 +255,6 @@ body {
     font-family: Roboto;
     font-size: 1.2rem;
     text-align: center;
-    box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.3);
-    -webkit-box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px -4px 10px -3px rgba(0,0,0,0.3);
 }
 
 .footer .by a {
@@ -256,6 +318,11 @@ body {
 
     .main-header .decoration #wildflower5 {
         right: 12rem;
+    }
+
+    .gallery > img {
+        top: 1rem;
+        left: 0;
     }
 
     .gallery .container .card {

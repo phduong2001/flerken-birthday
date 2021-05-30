@@ -4,12 +4,25 @@ AOS.init({
     duration: 1500
 });
 
-// show introduction when click on swing image
+// explode confetti the first load
+confetti();
+
+// show introduction
 const imgSwing = document.getElementById("swing-btn");
 
 imgSwing.addEventListener("click", () => {
     const introduction = document.getElementsByClassName("introduction")[0];
     introduction.style.display = "block";
+});
+
+// explode confetti
+const imgBirthday = document.getElementById("confetti-btn");
+
+imgBirthday.addEventListener("click", () => {
+    confetti({
+        particalCount: 300,
+        spread: 90
+    });
 });
 
 // scroll to top button
@@ -26,7 +39,7 @@ btnScrollUp.addEventListener("click", () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
 });
 
-// click on evelope
+// click on envelope
 const imgEnvelope = document.getElementById("envelope");
 
 imgEnvelope.addEventListener("click", () => {
@@ -36,10 +49,12 @@ imgEnvelope.addEventListener("click", () => {
 
     if (isClosed) {
         imgEnvelope.setAttribute("src", currentSrc.replace("closed", "open"));
+        imgEnvelope.style.width = "3rem"
         pMessage.style.display = "block";
     }
     else {
         imgEnvelope.setAttribute("src", currentSrc.replace("open", "closed"));
+        imgEnvelope.style.width = "5rem";
         pMessage.style.display = "none";
     }
 });
