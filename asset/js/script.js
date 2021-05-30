@@ -5,7 +5,14 @@ AOS.init({
 });
 
 // explode confetti the first load
-confetti();
+confetti({
+    angle: 45,
+    origin: { x: 0 }
+});
+confetti({
+    angle: 135,
+    origin: { x: 1 }
+});
 
 // show introduction
 const imgSwing = document.getElementById("swing-btn");
@@ -33,10 +40,10 @@ window.addEventListener("scroll", () => {
         btnScrollUp.style.display = "block";
     else
         btnScrollUp.style.display = "none";
-})
+});
 
 btnScrollUp.addEventListener("click", () => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({top: 0, behavior: "smooth"});
 });
 
 // click on envelope

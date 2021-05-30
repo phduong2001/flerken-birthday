@@ -77,30 +77,38 @@ body {
     to {transform: scale(1)}
 }
 
-.main-header .decoration img {
+.main-header .decoration > img {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 5rem;
+}
+
+.main-header .decoration .date {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+}
+
+.main-header .decoration .floor img {
     position: absolute;
     bottom: -0.75rem;
     width: 5rem;
 }
 
-.main-header .decoration > img {
-    top: 2rem;
-    right: 2rem;
-}
-
-.main-header .decoration #wildflower1 {
+.main-header .decoration .floor #wildflower1 {
     right: 0;
 }
 
-.main-header .decoration #wildflower2 {
+.main-header .decoration .floor #wildflower2 {
     right: 5rem;
 }
 
-.main-header .decoration #wildflower3 {
+.main-header .decoration .floor #wildflower3 {
     right: 10rem;
 }
 
-.main-header .decoration #wildflower4 {
+.main-header .decoration .floor #wildflower4 {
     right: 15rem;
 }
 
@@ -112,6 +120,9 @@ body {
     position: relative;
     display: none;
     background-color: #F7F7F7;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.15);
 }
 
 .introduction img {
@@ -133,11 +144,32 @@ body {
     padding: 2rem 0;
 }
 
-.gallery > img {
+.gallery .hang > img {
     position: absolute;
+}
+
+.gallery .hang #flags {
     transform: rotate(-25deg);
     left: -0.7rem;
     width: 20%;
+}
+
+.gallery .hang .right {
+    top: 0;
+    width: 6%;
+    opacity: 0.8;
+}
+
+.gallery .hang #rocket {
+    right: 1%;
+}
+
+.gallery .hang #star {
+    right: 5%;
+}
+
+.gallery .hang #mars {
+    right: 10%;
 }
 
 .gallery h1 {
@@ -296,33 +328,38 @@ body {
         font-size: 1.5rem;
     }
 
-    .main-header .decoration img {
+    .main-header .decoration #confetti-btn,
+    .main-header .decoration .floor img {
         width: 3rem;
     }
     
-    .main-header .decoration #wildflower1 {
+    .main-header .decoration .floor #wildflower1 {
         right: 0;
     }
     
-    .main-header .decoration #wildflower2 {
+    .main-header .decoration .floor #wildflower2 {
         right: 3rem;
     }
     
-    .main-header .decoration #wildflower3 {
+    .main-header .decoration .floor #wildflower3 {
         right: 6rem;
     }
     
-    .main-header .decoration #wildflower4 {
+    .main-header .decoration .floor #wildflower4 {
         right: 9rem;
     }
 
-    .main-header .decoration #wildflower5 {
+    .main-header .decoration .floor #wildflower5 {
         right: 12rem;
     }
 
-    .gallery > img {
+    .gallery .hang #flags {
         top: 1rem;
         left: 0;
+    }
+
+    .gallery .hang .right {
+        width: 9%;
     }
 
     .gallery .container .card {
