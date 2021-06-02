@@ -266,7 +266,7 @@ body {
     display: none;
     position: relative;
     margin-left: 3rem;
-    background: url("/asset/svg/note.svg");
+    background: url("../svg/note.svg");
     background-repeat: no-repeat;
     background-size: 17rem;
     width: 17rem;
